@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
  *
- * Retun: 1 (Success)
+ * Retun: Always 1 (Success)
  *
  */
 int main(void)
