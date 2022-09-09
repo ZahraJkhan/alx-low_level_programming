@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * main - Print lowercase alphabet in reverse
+ * main - Print lowercase alphabet in reverse followed by a new line
  *
- * Return : Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
