@@ -8,23 +8,12 @@
  */
 int main(void)
 {
-	int a, b;
+	int i;
 
-	for (a = '0'; a <= '99'; a++)
+	for (i = '0'; i < '100'; i++)
 	{
-		for (b = a + 1; b <= '99'; b++)
-		{
-			putchar ((a / 10) +'0');
-			putchar ((a % 10) + '0');
-			putchar (' ');
-			putchar ((b / 10) + '0');
-			putchar ((b % 10) + '0');
-
-			if (a == '99' && b == '99')
-				continue;
-			putchar (',');
-			putchar (' ');
-		}
+		putchar((i / 10) + '0');
+		putchar((i % 10) + '0');
 	}
 	putchar ('\n');
 
