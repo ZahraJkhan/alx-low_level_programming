@@ -7,25 +7,22 @@
  * @c: third integer
  * Return: largest number
  */
-int main(void)
+int largest_number(int a, int b, int c)
 {
-int largest_number(a, b, c)
-{
-	 int largest;
-
-	 if (a > b && a > c)
-	 {
-		 largest = a;
-	 }
-	  else if (b > a && b > c)
-	  {
-		  largest = b;
-	  }
-	 else
-	 {
-		 largest = c;
-	 }
+       	int largest;
+       
+	if (a >= b && a >= c)
+	{
+	       	largest = a;
+	}
+	else if (b >= a && b >= c)
+	{
+		largest = b;
+	}
+	else
+	{
+		largest = c;
+	}
 
 	 return (largest);
-}
 }
