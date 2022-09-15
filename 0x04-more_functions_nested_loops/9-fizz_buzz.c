@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 
 /**
  * main - Prints number from 1-100 mult of 3 Fizz 5 Buzz
