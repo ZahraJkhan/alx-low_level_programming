@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include "main.h"
 
 /**
- * main - Generates random valid passwords for prog crackme
+ * randomPasswordGeneration - Generates random valid passwords for prog crackme
  *
  * Return: Always 0
  */
@@ -15,12 +16,12 @@ void randomPasswordGeneration(int N)
 
 	srand((unsigned int)(time(NULL)));
 	
-	int numbers[] = "0123456789";
+	char numbers[] = "0123456789";
 	char letter[] = "abcdefghijklmnoqprstuvwyzx";
 	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 	char symbols[] = "!@#$^&*?";
 
-	int password[N];
+	char password[N];
 
 	for (i = 0; i < N; i++)
 	{
