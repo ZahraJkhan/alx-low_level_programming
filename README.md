@@ -1,1 +1,1 @@
-Starting C today
+Pointers,arrays_strings
