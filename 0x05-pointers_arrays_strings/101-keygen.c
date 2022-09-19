@@ -1,48 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 /**
  * main - Generates random valid passwords for prog crackme
  *
  * Return: Always 0
  */
+void randomPasswordGeneration(int N)
+{
+	int i;
+	int randomizer = 0;
+
+	srand((unsigned int)(time(NULL)));
+	
+	char numbers[] = "0123456789";
+	char letter[] = "abcdefghijklmnoqprstuvwyzx";
+	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+	char symbols[] = "!@#$^&*?";
+
+	char password[N];
+
+	for (i = 0; i < N; i++)
+	{
+		if (randomizer == 1)
+		{
+			password[i] = numbers[rand() % 10];
+			randomizer = rand() % 4;
+			printf("%c", password[i]);
+		}
+		else if (randomizer == 2)
+		{
+			password[i] = symbols[rand() % 8];
+			randomizer = rand() % 4;
+			printf("%c", password[i]);
+		}
+		else if (randomizer == 3)
+		{
+			password[i] = LETTER[rand() % 26];
+			randomizer = rand() % 4;
+			printf("%c", password[i]);
+		}
+		else
+		{
+			password[i] = letter[rand() % 26];
+			randomizer = rand() % 4;
+			printf("%c", password[i]);
+		}
+	}
+}
+
 int main(void)
 {
-	char password[84];
-	int index = 0, sum = 0, diff_half1, diff_half2;
+	int N = 10;
 
-	srand(time(0));
-	while (sum < 2772)
-	{
-		password[index] = 33 + rand() % 94;
-		sum += password[index++];
-	}
-	password[index] = '\0';
+	randomPasswordGeneration(N);
 
-	if (sum != 2772)
-	{
-		diff_half1 = (sum - 2772) / 2;
-		diff_half2 = (sum - 2772) / 2;
-		if ((sum - 2772) % 2 != 0)
-			diff_half1++;
-
-		for (index = 0; password[index]; index++)
-		{
-			if (password[index] >= (33 + diff_half1))
-			{
-				password[index] -= diff_half1;
-				break;
-			}
-		}
-		for (index = 0; password[index]; index++)
-		{
-			if (password[index] >= (33 + diff_half2))
-			{
-				password[index] -= diff_half2;
-				break;
-			}
-		}
-	}
 	return (0);
 }
