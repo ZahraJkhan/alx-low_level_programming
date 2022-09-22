@@ -36,7 +36,7 @@ void print_number(int n)
 		_putchar('0' + a4);
 	if (s5 != 0)
 		_putchar('0' + a5);
-i	if (s6 != 0)
+	if (s6 != 0)
 		_putchar('0' + a6);
 	if (s7 != 0)
 		_putchar('0' + a7);
