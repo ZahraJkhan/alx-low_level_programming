@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * infinite_add - adds two numbers
+ * infinite_add - Adds two numbers
  * @n1: first number
  * @n2: second number
  * @r: buffer for result
