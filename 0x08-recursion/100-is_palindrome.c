@@ -23,7 +23,7 @@ int _strlen(char *str)
  */
 int check_palindrome(int l, int r, char *p)
 {
-	if (1 >= r)
+	if (r <= 1)
 		return (1);
 	else if (p[l] != p[r])
 		return (0);
