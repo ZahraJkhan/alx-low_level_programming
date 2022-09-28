@@ -8,7 +8,7 @@
  * @t6: first spot in wildcard comparison
  *
  * Return: spot that matches or NULL
- */
+i */
 char *test(char *s5, char *s6, char *t5, char *t6)
 {
 	if (*s6 == '*' || (*s5 == '\0' && *s6 == '\0'))
@@ -39,7 +39,7 @@ char *wildcard(char *s3, char *s4)
  * wildcmp - compares two strings
  * @s1: first string
  * @s2: second string, may contain wildcard *
- * 
+ *
  * Return: 1 if match, 0 if not
  */
 int wildcmp(char *s1, char *s2)
