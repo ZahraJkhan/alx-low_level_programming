@@ -2,7 +2,7 @@
 
 /**
  * sqrt_check - checks for the square root of c
- * @g:guess at sqrt
+ * @g: guess at sqrt
  * @c: the no to find sqroot of
  *
  * Return: -1 or sqrt of c
@@ -17,7 +17,7 @@ int sqrt_check(int g, int c)
 }
 /**
  * _sqrt_recursion - Returns natural sq root of no.
- * @n: the no to sq root 
+ * @n: the no to sq root
  *
  * Return: sq root of n else -1 if n sq root is not natural
  */
