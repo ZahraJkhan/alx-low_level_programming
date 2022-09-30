@@ -5,7 +5,7 @@
  * @argc: no of arg passed to func
  * @argv: arg pointer to string
  *
- * Retunr: Always 0
+ * Return: Always 0
  */
 int main(int argc, char *argv[] __attribute__((unused)))
 {
