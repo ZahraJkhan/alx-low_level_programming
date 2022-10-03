@@ -36,7 +36,7 @@ char **strtow(char *str)
 	char **w;
 
 	if (str == NULL || *str == '\0')
-		retrun (NULL);
+		return (NULL);
 	n = wrdcnt(str);
 	if (n == 1)
 		retrun (NULL);
