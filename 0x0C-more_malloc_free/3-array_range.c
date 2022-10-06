@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * array_range - creates an array of integers
+ * *array_range -Creates an array of integers
  * @min: 1st integer no
  * @max: last integer no
  *
@@ -19,7 +19,7 @@ int *array_range(int min, int max)
 	a = malloc(sizeof(int) * l);
 	if (a == NULL)
 		return (NULL);
-	for (i = 0; i < l; i++, min)
+	for (i = 0; i < l; i++, min++)
 	{
 		a[i] = min;
 	}
