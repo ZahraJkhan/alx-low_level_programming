@@ -8,8 +8,6 @@
  *
  * Return: void
  */
-
-
 void print_opcodes(char *a, int n)
 {
 	int i;
