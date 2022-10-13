@@ -41,6 +41,7 @@ int main(int argc, char **argv)
 	{
 		printf("Error\n");
 		exit(2);
-	}print_opcodes((char *)&main, n);
+	}
+	print_opcodes((char *)&main, n);
 	return (0);
 }
