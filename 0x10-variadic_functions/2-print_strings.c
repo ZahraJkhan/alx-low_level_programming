@@ -4,7 +4,7 @@
 
 /**
  * print_strings - Prints strings followed by \n
- * @seperator: the string to be printed
+ * @separator: the string to be printed
  * @n: no of strings passed to function
  * @...: a variable no of no to be printed
  *
