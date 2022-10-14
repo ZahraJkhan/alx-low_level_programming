@@ -6,26 +6,23 @@
  * print_strings - Prints strings followed by \n
  * @seperator: the string to be printed
  * @n: no of strings passed to function
+ * @...: a variable no of no to be printed
  *
- * Return: void/
+ * Return: void
  */
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
-	char *str;
-	va_list valist;
+	va_list nums;
+	unsigned int index;
 
-	va_start(valist, n);
-	for (i = 0; i < n; i++)
+	va_start(nums, n);
+
+	for (index = 0; index < n; index++)
 	{
-		str = va_arg(valist, char *);
-		if (str)
-			print("%s", str);
-		else
-			printf("(nil)");
-		if (i < n - 1 && seperator)
-			printf("%s", seperator);
+		printf("%d", va_arg(nums, int));
+		if (index != (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
 	printf("\n");
-	ve_end(valist);
+	va_end(nums);
 }
