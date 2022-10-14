@@ -8,7 +8,7 @@
  * @n: no of strings passed to function
  * @...: a variable no of no to be printed
  *
- * Return: void
+ * Description: dont print if seperator is NULL, if one str is null-nil
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
