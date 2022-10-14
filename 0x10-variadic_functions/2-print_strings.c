@@ -10,7 +10,7 @@
  *
  * Description: dont print if seperator is NULL, if one str is null-nil
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list valist;
 	unsigned int i;
