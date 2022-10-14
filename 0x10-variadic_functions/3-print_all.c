@@ -64,7 +64,6 @@ void print_all(const char * const format, ...)
 	va_list valist;
 	char *seperator = "";
 
-
 	va_start(valist, format);
 	i = 0;
 
@@ -73,7 +72,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (p[j].t != NULL)
 		{
-			if (*p]j].t == format[i])
+			if (*p[j].t == format[i])
 			{
 				printf("%s", seperator);
 				p[j].f(valist);
