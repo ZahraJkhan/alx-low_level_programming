@@ -6,23 +6,25 @@
  * print_numbers - prints numbers, followed by a new line.
  * @separator: the string to bd printed between two no.
  * @n: number of numbers to print
+ * @...: A variable number of numbers to be printed
  *
  * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
-	int num;
-	va_list valist;
+	va_list nums;
+	unsigned int index;
 
-	va_start(valist, n);
-	for (i = 0; i < n; i++)
+	va_start(nums, n);
+
+	for (index = 0; index < n; index++)
 	{
-		num = va_arg(valist, int);
-		printf("%d", num);
-		if (i < n - 1 && seperator)
-			printf("%s", seperator);
+		printf("%d", va_arg(nums, int));
+
+		if (index != (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
 	printf("\n");
-	va_end(valist);
+
+	va_end(nums);
 }
