@@ -3,14 +3,14 @@
 
 #include <stdarg.h>
 /**
- * struct print - print type with corresponding print function
- * @t: print type
- * @f: print function
+ * struct printer - print type with corresponding print function
+ * @symbol: symbol rep data type
+ * @print: function pointer to a func that prints a data type rep a symbol
  */
-typedef struct print
+typedef struct printer
 {
-	char *t;
-	void (*f)(va_list arg);
+	char *symbol;
+	void (*print)(va_list arg);
 }print_t;
 
 int _putchar(char);
