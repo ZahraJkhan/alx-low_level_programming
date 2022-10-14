@@ -60,7 +60,6 @@ void print_string(va_list arg)
 		printf("(nil)");
 		return;
 	}
-
 	printf("%s", str);
 }
 /**
@@ -81,7 +80,6 @@ void print_all(const char * const format, ...)
 		{"f", print_float},
 		{"s", print_string}
 	};
-	
 	va_start(args, format);
 
 	while (format && (*(format + i)))
@@ -97,10 +95,8 @@ void print_all(const char * const format, ...)
 			funcs[j].print(args);
 			separator = ", ";
 		}
-
 		i++;
 	}
-
 	printf("\n");
 
 	va_end(args);
