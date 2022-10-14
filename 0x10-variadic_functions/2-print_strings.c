@@ -14,7 +14,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list strings;
 	char *str;
+	int sep = 1;
 	unsigned int index;
+
+	if (seperator == NULL)
+		sep = 0;
 
 	va_start(strings, n);
 
