@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <limits.h>
+
 
 /**
  * get_bit - Provides the value of a bit ata given index
@@ -8,12 +11,11 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int bits;
+	int bit;
 
-	bits = (n >> index) & 1;
-
-	if ((bits == 1) || (bits == 0))
-		return (bits);
-	else
+	bit = ((n >> index) & 1);
+	if (index > 64)
 		return (-1);
+	return (bit);
 }
+
