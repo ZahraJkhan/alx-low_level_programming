@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -33,4 +33,3 @@ int append_text_to_file(const char *filename, char *text_content)
 	close(fd);
 	return (1);
 }
-
